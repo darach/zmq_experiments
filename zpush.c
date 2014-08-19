@@ -65,7 +65,6 @@ int main (int argc, char **argv)
     unsigned long int current = 0;
     unsigned long int tx = 0;
     do {
-        // int size = zmq_send(publisher, channel_name, strlen(channel_name), ZMQ_SNDMORE);
         char buf[256];
         sprintf(buf,"%lu bottles of beer on the wall",current++);
         int size = zmq_send(publisher, buf, strlen(buf), 0);
